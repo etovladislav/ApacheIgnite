@@ -16,7 +16,8 @@ public class IndexController {
 
     @RequestMapping("/")
     public String getIndex() {
-        Ignite ignite = Ignition.ignite();
+        Ignite ignite = Ignition.start();
+        ignite = Ignition.ignite();
         final IgniteCache<Integer, String> cache = ignite.cache("cacheName");
         for (int i = 0; i < 10; i++)
             cache.put(i, Integer.toString(i));
