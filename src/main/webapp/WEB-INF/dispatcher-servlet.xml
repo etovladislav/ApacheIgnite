@@ -11,6 +11,10 @@
 
     <mvc:annotation-driven/>
 
+    <bean id="igniteUtils" class="ignite.IgniteUtils">
+        <property name="ignite"
+                  value="/Users/etovladislav/Desktop/apache-ignite-fabric-1.7.0-bin/examples/config/client-ignite.xml"></property>
+    </bean>
     <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
         <property name="templateLoaderPath" value="/WEB-INF/templates"/>
         <property name="defaultEncoding" value="UTF-8"/>
